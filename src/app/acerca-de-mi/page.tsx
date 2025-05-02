@@ -91,7 +91,6 @@ export default function AcercaDeMi() {
                     en cada proyecto, mantener una comunicación abierta y crecer continuamente como profesional 
                     y ser humano.&quot;
                   </p>
-
                   <br />
                 </div>
               </div>
