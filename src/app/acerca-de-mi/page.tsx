@@ -11,12 +11,14 @@ export default function AcercaDeMi() {
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-1 flex justify-center">
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-purple-200 dark:border-purple-900">
-              <Image
-                src="/placeholder.svg?height=256&width=256"
-                alt="Mi foto de perfil"
-                fill
-                className="object-cover"
-              />
+            <Image
+              src="/miFoto.jpg"
+              alt="Mi foto de perfil"
+              fill
+              className="object-cover"
+            />
+
+
             </div>
           </div>
 
@@ -83,8 +85,13 @@ export default function AcercaDeMi() {
                   <h4 className="font-medium">Mi filosofía de trabajo</h4>
                   <br />
                   <p className="text-sm text-muted-foreground">
-                    "Mi filosofía de trabajo se basa en el compromiso, la colaboración y el aprendizaje continuo..."
+                    &quot;Creo en el poder del compromiso, la colaboración efectiva y el aprendizaje constante. 
+                    Para mí, el desarrollo de software no es solo una disciplina técnica, sino una herramienta
+                    capaz de transformar y mejorar la vida de las personas. Me esfuerzo por aportar valor real 
+                    en cada proyecto, mantener una comunicación abierta y crecer continuamente como profesional 
+                    y ser humano.&quot;
                   </p>
+
                   <br />
                 </div>
               </div>
