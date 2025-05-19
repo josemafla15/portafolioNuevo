@@ -19,7 +19,7 @@ export default function Testimonios() {
         {/* Testimonio 1 */}
         <div className="flex flex-col items-center border border-black rounded-lg p-6 w-80 bg-white dark:bg-gray-800 shadow-md">
           <Image
-            src="/pepito.jpg" // Cambia esto por la ruta real de tu imagen
+            src="/pepito.jpeg" // Cambia esto por la ruta real de tu imagen
             alt="Foto de Pepito Pérez"
             width={100}
             height={100}
@@ -35,7 +35,7 @@ export default function Testimonios() {
         {/* Testimonio 2 */}
         <div className="flex flex-col items-center border border-black rounded-lg p-6 w-80 bg-white dark:bg-gray-800 shadow-md">
           <Image
-            src="/andres.jpg"
+            src="/andres.jpeg"
             alt="Foto de Andrés Arteaga"
             width={100}
             height={100}
