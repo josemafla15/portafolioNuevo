@@ -16,16 +16,14 @@ export default function Testimonios() {
       {/* Contenedor de testimonios */}
       <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
         {/* Testimonio 1 */}
-        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-full sm:w-80 bg-white dark:bg-gray-800 shadow-md">
-          <div className="w-24 h-24 relative mb-4">
-            <Image
-              src="/pepito.jpeg"
-              alt="Foto de Pepito Pérez"
-              fill
-              className="rounded-full object-cover"
-              sizes="96px"
-            />
-          </div>
+        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-80 bg-white dark:bg-gray-800 shadow-md">
+          <Image
+            src="/pepito.jpeg" // Cambia esto por la ruta real de tu imagen
+            alt="Foto de Pepito Pérez"
+            width={100}
+            height={100}
+            className="rounded-full mb-4"
+          />
           <h2 className="text-2xl font-bold mb-2">Pepito Pérez</h2>
           <h3 className="text-gray-600 dark:text-gray-300 mb-4 text-center">Profesor</h3>
           <p className="text-gray-600 dark:text-gray-300 text-center">
@@ -34,16 +32,14 @@ export default function Testimonios() {
         </div>
 
         {/* Testimonio 2 */}
-        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-full sm:w-80 bg-white dark:bg-gray-800 shadow-md">
-          <div className="w-24 h-24 relative mb-4">
-            <Image
-              src="/andres.jpeg"
-              alt="Foto de Andrés Arteaga"
-              fill
-              className="rounded-full object-cover"
-              sizes="96px"
-            />
-          </div>
+        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-80 bg-white dark:bg-gray-800 shadow-md">
+          <Image
+            src="/andres.jpeg"
+            alt="Foto de Andrés Arteaga"
+            width={100}
+            height={100}
+            className="rounded-full mb-4"
+          />
           <h2 className="text-2xl font-bold mb-2">Andrés Arteaga</h2>
           <h3 className="text-gray-600 dark:text-gray-300 mb-4 text-center">Profesor</h3>
           <p className="text-gray-600 dark:text-gray-300 text-center">
