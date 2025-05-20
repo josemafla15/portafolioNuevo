@@ -1,30 +1,31 @@
-import Image from "next/image";
+import Image from "next/image"
 
 export default function Testimonios() {
   return (
-    <div className="bg-background text-text py-16 px-4">
-      <div className="flex flex-col items-center justify-center w-full mb-16">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+    <div className="bg-background text-text py-8 md:py-16 px-4">
+      <div className="flex flex-col items-center justify-center w-full mb-8 md:mb-16">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 text-center">
           Testimonios
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl text-center">
-          Estas son algunas opiniones de profesores y colegas con los que he tenido el placer de trabajar. Su satisfacción
-          es mi mayor recompensa.
+        <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 md:mb-12 max-w-2xl text-center">
+          Estas son algunas opiniones de profesores y colegas con los que he tenido el placer de trabajar. Su
+          satisfacción es mi mayor recompensa.
         </p>
       </div>
 
       {/* Contenedor de testimonios */}
-      <div className="flex flex-wrap justify-center gap-8">
-
+      <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
         {/* Testimonio 1 */}
-        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-80 bg-white dark:bg-gray-800 shadow-md">
-          <Image
-            src="/pepito.jpeg" // Cambia esto por la ruta real de tu imagen
-            alt="Foto de Pepito Pérez"
-            width={100}
-            height={100}
-            className="rounded-full mb-4"
-          />
+        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-full sm:w-80 bg-white dark:bg-gray-800 shadow-md">
+          <div className="w-24 h-24 relative mb-4">
+            <Image
+              src="/pepito.jpeg"
+              alt="Foto de Pepito Pérez"
+              fill
+              className="rounded-full object-cover"
+              sizes="96px"
+            />
+          </div>
           <h2 className="text-2xl font-bold mb-2">Pepito Pérez</h2>
           <h3 className="text-gray-600 dark:text-gray-300 mb-4 text-center">Profesor</h3>
           <p className="text-gray-600 dark:text-gray-300 text-center">
@@ -33,14 +34,16 @@ export default function Testimonios() {
         </div>
 
         {/* Testimonio 2 */}
-        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-80 bg-white dark:bg-gray-800 shadow-md">
-          <Image
-            src="/andres.jpeg"
-            alt="Foto de Andrés Arteaga"
-            width={100}
-            height={100}
-            className="rounded-full mb-4"
-          />
+        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-full sm:w-80 bg-white dark:bg-gray-800 shadow-md">
+          <div className="w-24 h-24 relative mb-4">
+            <Image
+              src="/andres.jpeg"
+              alt="Foto de Andrés Arteaga"
+              fill
+              className="rounded-full object-cover"
+              sizes="96px"
+            />
+          </div>
           <h2 className="text-2xl font-bold mb-2">Andrés Arteaga</h2>
           <h3 className="text-gray-600 dark:text-gray-300 mb-4 text-center">Profesor</h3>
           <p className="text-gray-600 dark:text-gray-300 text-center">
@@ -49,14 +52,16 @@ export default function Testimonios() {
         </div>
 
         {/* Testimonio 3 */}
-        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-80 bg-white dark:bg-gray-800 shadow-md">
-          <Image
-            src="/camilo.jpg"
-            alt="Foto de Camilo Ortega"
-            width={100}
-            height={100}
-            className="rounded-full mb-4"
-          />
+        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-full sm:w-80 bg-white dark:bg-gray-800 shadow-md">
+          <div className="w-24 h-24 relative mb-4">
+            <Image
+              src="/camilo.jpg"
+              alt="Foto de Camilo Ortega"
+              fill
+              className="rounded-full object-cover"
+              sizes="96px"
+            />
+          </div>
           <h2 className="text-2xl font-bold mb-2">Camilo Ortega</h2>
           <h3 className="text-gray-600 dark:text-gray-300 mb-4 text-center">Profesor</h3>
           <p className="text-gray-600 dark:text-gray-300 text-center">
@@ -65,22 +70,23 @@ export default function Testimonios() {
         </div>
 
         {/* Testimonio 4 */}
-        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-80 bg-white dark:bg-gray-800 shadow-md">
-          <Image
-            src="/camila.jpg"
-            alt="Foto de Camila Martínez"
-            width={100}
-            height={100}
-            className="rounded-full mb-4"
-          />
+        <div className="flex flex-col items-center border border-black rounded-lg p-6 w-full sm:w-80 bg-white dark:bg-gray-800 shadow-md">
+          <div className="w-24 h-24 relative mb-4">
+            <Image
+              src="/camila.jpg"
+              alt="Foto de Camila Martínez"
+              fill
+              className="rounded-full object-cover"
+              sizes="96px"
+            />
+          </div>
           <h2 className="text-2xl font-bold mb-2">Camila Martínez</h2>
           <h3 className="text-gray-600 dark:text-gray-300 mb-4 text-center">Compañera de trabajo</h3>
           <p className="text-gray-600 dark:text-gray-300 text-center">
             Jose es un gran amigo y un gran compañero, siempre dispuesto a ayudar y colaborar.
           </p>
         </div>
-
       </div>
     </div>
-  );
+  )
 }

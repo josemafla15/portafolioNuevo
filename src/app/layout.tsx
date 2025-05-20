@@ -1,26 +1,29 @@
-// app/layout.tsx
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import type React from "react"
+import "./globals.css"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import Navbar from "../../components/Navbar"
+import Footer from "../../components/Footer"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Jose Manuel Mafla Munoz",
-  description: "Mi portafolio",
-};
+  title: "Portafolio de José Mafla",
+  description: "Portafolio profesional de José Manuel Mafla Muñoz, Ingeniero de Software",
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="es">
+      <body className={inter.className}>
         <Navbar />
         <main>{children}</main>
         <Footer />
       </body>
     </html>
-  );
+  )
 }
