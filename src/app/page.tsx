@@ -13,29 +13,33 @@ export default function Home() {
           mejoren la vida de las personas.
         </p>
 
-        {/* Contenedor de botones con display block para asegurar visibilidad */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 w-full">
+        {/* Botones simplificados con estilos básicos */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto">
           <a
             href="/proyectos"
-            className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base mb-2"
+            className="block w-full bg-purple-500 text-white text-center font-bold py-3 px-6 rounded-lg shadow-md"
+            style={{ display: "block" }} // Forzar display block con inline style
           >
             Ver proyectos
           </a>
           <a
             href="/acerca-de-mi"
-            className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base mb-2"
+            className="block w-full bg-purple-500 text-white text-center font-bold py-3 px-6 rounded-lg shadow-md"
+            style={{ display: "block" }} // Forzar display block con inline style
           >
             Acerca de mí
           </a>
           <a
             href="/testimonios"
-            className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base mb-2"
+            className="block w-full bg-purple-500 text-white text-center font-bold py-3 px-6 rounded-lg shadow-md"
+            style={{ display: "block" }} // Forzar display block con inline style
           >
             Testimonios
           </a>
           <a
             href="/contacto"
-            className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base mb-2"
+            className="block w-full bg-purple-500 text-white text-center font-bold py-3 px-6 rounded-lg shadow-md"
+            style={{ display: "block" }} // Forzar display block con inline style
           >
             Contactar
           </a>
