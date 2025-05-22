@@ -71,7 +71,19 @@ export default function Contacto() {
           ></textarea>
           <button
             type="submit"
-            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition-colors"
+            style={{
+              display: "block",
+              width: "100%",
+              backgroundColor: "#9333ea",
+              color: "white",
+              padding: "10px 16px",
+              borderRadius: "6px",
+              fontWeight: "bold",
+              fontSize: "16px",
+              cursor: "pointer",
+              border: "none",
+              textAlign: "center",
+            }}
           >
             Enviar mensaje
           </button>
