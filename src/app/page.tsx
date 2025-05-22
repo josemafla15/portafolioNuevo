@@ -12,28 +12,30 @@ export default function Home() {
           Bienvenido a mi portafolio profesional. Soy un desarrollador apasionado por crear soluciones digitales que
           mejoren la vida de las personas.
         </p>
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+
+        {/* Contenedor de botones con display block para asegurar visibilidad */}
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 w-full">
           <a
             href="/proyectos"
-            className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base"
+            className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base mb-2"
           >
             Ver proyectos
           </a>
           <a
             href="/acerca-de-mi"
-            className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base"
+            className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base mb-2"
           >
             Acerca de mí
           </a>
           <a
             href="/testimonios"
-            className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base"
+            className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base mb-2"
           >
             Testimonios
           </a>
           <a
             href="/contacto"
-            className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base"
+            className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg transition-colors shadow-md text-sm sm:text-base mb-2"
           >
             Contactar
           </a>
