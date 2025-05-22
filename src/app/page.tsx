@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Contenedor principal con padding extra */}
+      {/* Contenedor principal con padding */}
       <div className="px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
           {/* Título */}
@@ -16,19 +16,11 @@ export default function Home() {
             mejoren la vida de las personas.
           </p>
 
-          {/* Texto de prueba para verificar que esta sección es visible */}
-          <div className="mb-8">
-            <p className="text-red-500 font-bold">
-              ¿Puedes ver este texto rojo? Si sí, el problema está específicamente en los botones.
-            </p>
-          </div>
-
-          {/* Botones con estilos completamente básicos */}
+          {/* Botones con estilos que funcionan en móviles */}
           <div className="space-y-4">
             <div>
               <a
                 href="/proyectos"
-                className="bg-purple-600 text-white px-8 py-4 text-lg font-bold"
                 style={{
                   display: "block",
                   width: "250px",
@@ -50,7 +42,6 @@ export default function Home() {
             <div>
               <a
                 href="/acerca-de-mi"
-                className="bg-purple-600 text-white px-8 py-4 text-lg font-bold"
                 style={{
                   display: "block",
                   width: "250px",
@@ -72,7 +63,6 @@ export default function Home() {
             <div>
               <a
                 href="/testimonios"
-                className="bg-purple-600 text-white px-8 py-4 text-lg font-bold"
                 style={{
                   display: "block",
                   width: "250px",
@@ -94,7 +84,6 @@ export default function Home() {
             <div>
               <a
                 href="/contacto"
-                className="bg-purple-600 text-white px-8 py-4 text-lg font-bold"
                 style={{
                   display: "block",
                   width: "250px",
@@ -112,11 +101,6 @@ export default function Home() {
                 Contactar
               </a>
             </div>
-          </div>
-
-          {/* Texto de prueba después de los botones */}
-          <div className="mt-8">
-            <p className="text-blue-500 font-bold">¿Puedes ver este texto azul después de los botones?</p>
           </div>
         </div>
       </div>
