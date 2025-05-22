@@ -1,237 +1,154 @@
-import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
-import { BiLinkExternal } from "react-icons/bi";
+import Image from "next/image"
+import Link from "next/link"
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
 
-export default function Testimonios() {
+export default function Proyectos() {
   return (
-    <div className="bg-background text-text py-16 px-4">
-      <div className="flex flex-col items-center justify-center w-full mb-16">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-          Mis proyectos
+    <div className="bg-background text-text py-8 sm:py-16 px-4">
+      <div className="flex flex-col items-center justify-center w-full mb-8 sm:mb-16">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 text-center">
+          Proyectos
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl text-center">
-          Estas son algunas opiniones de profesores y colegas con los que he tenido el placer de trabajar. Su satisfacción
-          es mi mayor recompensa.
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 max-w-2xl text-center">
+          Estos son algunos de los proyectos en los que he trabajado. Cada uno representa un desafío único que me ha
+          permitido crecer como desarrollador.
         </p>
       </div>
 
-      {/* Contenedor de testimonios */}
-      <div className="flex flex-wrap justify-center gap-8">
-
-      <div className="flex flex-col justify-between items-center border border-black rounded-lg p-6 w-80 min-h-[500px] bg-white dark:bg-gray-800 shadow-md">
-        <h2 className="text-2xl font-bold mb-2">Gestor financiero</h2>
-
-        <div className="w-full h-[200px] mb-4 overflow-hidden rounded-lg">
-          <Image
-            src="/gestorFinanciero.jpg"
-            alt="Gestor financiero"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* Proyecto 1 */}
+        <div className="border border-black rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md flex flex-col">
+          <div className="relative h-48 w-full">
+            <Image src="/proyecto-web.png" alt="Proyecto 1" fill className="object-cover" />
+          </div>
+          <div className="p-4 flex-grow">
+            <h2 className="text-xl font-bold mb-2">Aplicación Web</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Una aplicación web desarrollada con Next.js y Tailwind CSS. Incluye autenticación de usuarios y base de
+              datos.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full text-xs">
+                Next.js
+              </span>
+              <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full text-xs">
+                Tailwind
+              </span>
+              <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full text-xs">
+                MongoDB
+              </span>
+            </div>
+          </div>
+          <div className="p-4 pt-0 flex justify-between">
+            <Link
+              href="https://github.com/josemafla15"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-purple-600 hover:text-purple-800 text-sm"
+            >
+              <FaGithub className="text-lg" /> Código
+            </Link>
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-purple-600 hover:text-purple-800 text-sm"
+            >
+              <FaExternalLinkAlt /> Demo
+            </Link>
+          </div>
         </div>
 
-        <p className="text-gray-600 dark:text-gray-300 text-center">
-          Aplicación para ver tus ingresos y egresos a lo largo del mes, incluyendo gráficas.
-          En este pequeño proyecto se puede apreciar el uso de next.js y tailwind.
-        </p>
-
-        <div className="flex flex-wrap gap-2 my-4">
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            Next.js
-          </span>
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            Tailwind
-          </span>
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            Typescript
-          </span>
+        {/* Proyecto 2 */}
+        <div className="border border-black rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md flex flex-col">
+          <div className="relative h-48 w-full">
+            <Image src="/mobile-application.png" alt="Proyecto 2" fill className="object-cover" />
+          </div>
+          <div className="p-4 flex-grow">
+            <h2 className="text-xl font-bold mb-2">Aplicación Móvil</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Una aplicación móvil desarrollada con React Native. Incluye notificaciones push y almacenamiento local.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full text-xs">
+                React Native
+              </span>
+              <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full text-xs">
+                Firebase
+              </span>
+              <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full text-xs">
+                Redux
+              </span>
+            </div>
+          </div>
+          <div className="p-4 pt-0 flex justify-between">
+            <Link
+              href="https://github.com/josemafla15"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-purple-600 hover:text-purple-800 text-sm"
+            >
+              <FaGithub className="text-lg" /> Código
+            </Link>
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-purple-600 hover:text-purple-800 text-sm"
+            >
+              <FaExternalLinkAlt /> Demo
+            </Link>
+          </div>
         </div>
 
-        <div className="flex gap-4 mt-4">
-          <a
-            href="https://trabajo-gesto-financiero.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ver demo"
-            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-2xl"
-          >
-            <BiLinkExternal />
-          </a>
-          <a
-            href="https://github.com/josemafla15/TrabajoGestoFinanciero"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ver en GitHub"
-            className="text-gray-800 hover:text-black dark:text-white dark:hover:text-gray-400 text-2xl"
-          >
-            <FaGithub />
-          </a>
+        {/* Proyecto 3 */}
+        <div className="border border-black rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md flex flex-col">
+          <div className="relative h-48 w-full">
+            <Image
+              src="/placeholder.svg?height=400&width=600&query=API REST"
+              alt="Proyecto 3"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-4 flex-grow">
+            <h2 className="text-xl font-bold mb-2">API REST</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+              Una API REST desarrollada con Django REST Framework. Incluye autenticación JWT y documentación con
+              Swagger.
+            </p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full text-xs">
+                Django
+              </span>
+              <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full text-xs">
+                PostgreSQL
+              </span>
+              <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-2 py-1 rounded-full text-xs">
+                Docker
+              </span>
+            </div>
+          </div>
+          <div className="p-4 pt-0 flex justify-between">
+            <Link
+              href="https://github.com/josemafla15"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-purple-600 hover:text-purple-800 text-sm"
+            >
+              <FaGithub className="text-lg" /> Código
+            </Link>
+            <Link
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-purple-600 hover:text-purple-800 text-sm"
+            >
+              <FaExternalLinkAlt /> Demo
+            </Link>
+          </div>
         </div>
-      </div>
-
-
-      {/* Proyecto 2 */}
-      <div className="flex flex-col justify-between items-center border border-black rounded-lg p-6 w-80 min-h-[500px] bg-white dark:bg-gray-800 shadow-md">
-        <h2 className="text-2xl font-bold mb-2">Tienda de productos de mascotas</h2>
-        <div className="w-full h-[200px] mb-4 overflow-hidden rounded-lg">
-          <Image
-            src="/paginaWeb.jpg"
-            alt="Gestor financiero"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-
-        
-        <p className="text-gray-600 dark:text-gray-300 text-center">
-          Aplicativo web de una tienda de productos para mascotas, donde puedes ver los productos y agregarlos al carrito.
-          Con un enfoque mayor en el backend.
-        </p>
-
-        <div className="flex flex-wrap gap-2 my-4">
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            Python
-          </span>
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            Django
-          </span>
-         
-        </div>
-
-        <div className="flex gap-4 mt-4">
-          {/* <a
-            href="https://trabajo-gesto-financiero.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ver demo"
-            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-2xl"
-          >
-            <BiLinkExternal />
-          </a> */}
-          <a
-            href="https://github.com/josemafla15/PaginaWebTiendaDeMasctos"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ver en GitHub"
-            className="text-gray-800 hover:text-black dark:text-white dark:hover:text-gray-400 text-2xl"
-          >
-            <FaGithub />
-          </a>
-        </div>
-      </div>
-
-      {/* Proyecto 3 */}
-      <div className="flex flex-col justify-between items-center border border-black rounded-lg p-6 w-80 min-h-[500px] bg-white dark:bg-gray-800 shadow-md">
-        <h2 className="text-2xl font-bold mb-2">Ventana con Next.js</h2>
-        <div className="w-full h-[200px] mb-4 overflow-hidden rounded-lg">
-          <Image
-            src="/ventana.jpg"
-            alt="Gestor financiero"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-
-        
-        <p className="text-gray-600 dark:text-gray-300 text-center">
-          Es una ventana simple diseñada con next.js.
-          En esta se pueden apreciar mis habilidades de frontend y el uso de tailwind.
-        </p>
-
-        <div className="flex flex-wrap gap-2 my-4">
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            Next.js
-          </span>
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            Tailwind
-          </span>
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            Typescript
-          </span>
-         
-        </div>
-
-        <div className="flex gap-4 mt-4">
-          <a
-            href="https://trabajo-window-ui-8spm.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ver demo"
-            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-2xl"
-          >
-            <BiLinkExternal />
-          </a>
-          <a
-            href="https://github.com/josemafla15/TrabajoWindowUI-"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ver en GitHub"
-            className="text-gray-800 hover:text-black dark:text-white dark:hover:text-gray-400 text-2xl"
-          >
-            <FaGithub />
-          </a>
-        </div>
-      </div>
-
-      {/* Proyecto 4 */}
-      <div className="flex flex-col justify-between items-center border border-black rounded-lg p-6 w-80 min-h-[500px] bg-white dark:bg-gray-800 shadow-md">
-          
-          <h2 className="text-2xl font-bold mb-2">Gestor de citas médicas</h2>
-          <div className="w-full h-[200px] mb-4 overflow-hidden rounded-lg">
-          <Image
-            src="/gestorCitasMedicas.jpg"
-            alt="Gestor financiero"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-
-        
-        <p className="text-gray-600 dark:text-gray-300 text-center">
-          Aplicación para gestionar citas médicas, donde puedes ver los médicos disponibles y agendar una cita.
-          Tiene un mayor enfoque en backend, utilizando consultas SQL nativas.
-        </p>
-
-        <div className="flex flex-wrap gap-2 my-4">
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            Python
-          </span>
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            Tkinter
-          </span>
-          <span className="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full text-sm">
-            SQL
-          </span>
-         
-        </div>
-
-        <div className="flex gap-4 mt-4">
-          {/* <a
-            href="https://trabajo-gesto-financiero.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ver demo"
-            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-2xl"
-          >
-            <BiLinkExternal />
-          </a> */}
-          <a
-            href="https://github.com/josemafla15/TrabajoFinalBasesDeDatos"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Ver en GitHub"
-            className="text-gray-800 hover:text-black dark:text-white dark:hover:text-gray-400 text-2xl"
-          >
-            <FaGithub />
-          </a>
-        </div>
-      </div>
-
       </div>
     </div>
-  );
+  )
 }

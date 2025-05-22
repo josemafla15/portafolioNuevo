@@ -1,24 +1,16 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 export default function Footer() {
   return (
-    <footer style={{ padding: "1rem", backgroundColor: "#111", color: "#fff", textAlign: "center" }}>
-      <h3 style={{ marginBottom: "0.5rem", fontSize: "1.2rem" }}>Mis redes sociales</h3>
-      
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "1.5rem",
-          margin: "0 auto 1rem",
-          maxWidth: "150px",
-        }}
-      >
+    <footer className="py-4 px-4 bg-gray-900 text-white text-center">
+      <h3 className="mb-2 text-lg sm:text-xl">Mis redes sociales</h3>
+      <div className="flex justify-center gap-6 mx-auto mb-4 max-w-[150px]">
         <a
           href="https://github.com/josemafla15"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: "#fff", fontSize: "1.5rem" }}
+          className="text-white text-xl sm:text-2xl hover:text-purple-400 transition-colors"
+          aria-label="GitHub"
         >
           <FaGithub />
         </a>
@@ -26,13 +18,15 @@ export default function Footer() {
           href="https://www.linkedin.com/in/jos%C3%A9-manuel-mafla-mu%C3%B1oz-55b874313/"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ color: "#fff", fontSize: "1.5rem" }}
+          className="text-white text-xl sm:text-2xl hover:text-purple-400 transition-colors"
+          aria-label="LinkedIn"
         >
           <FaLinkedin />
         </a>
       </div>
-
-      <p>&copy; {new Date().getFullYear()} Jose Manuel Mafla Muñoz. Todos los derechos reservados.</p>
+      <p className="text-sm sm:text-base">
+        &copy; {new Date().getFullYear()} Jose Manuel Mafla Muñoz. Todos los derechos reservados.
+      </p>
     </footer>
-  );
+  )
 }
