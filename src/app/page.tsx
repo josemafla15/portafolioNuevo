@@ -1,48 +1,123 @@
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-          José Manuel Mafla
-        </h1>
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 sm:mb-8 text-gray-700 dark:text-gray-300">
-          Ingeniero de Software
-        </h2>
-        <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto">
-          Bienvenido a mi portafolio profesional. Soy un desarrollador apasionado por crear soluciones digitales que
-          mejoren la vida de las personas.
-        </p>
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      {/* Contenedor principal con padding extra */}
+      <div className="px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Título */}
+          <h1 className="text-4xl font-bold mb-6 text-purple-600">José Manuel Mafla</h1>
 
-        {/* Botones simplificados con estilos básicos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto">
-          <a
-            href="/proyectos"
-            className="block w-full bg-purple-500 text-white text-center font-bold py-3 px-6 rounded-lg shadow-md"
-            style={{ display: "block" }} // Forzar display block con inline style
-          >
-            Ver proyectos
-          </a>
-          <a
-            href="/acerca-de-mi"
-            className="block w-full bg-purple-500 text-white text-center font-bold py-3 px-6 rounded-lg shadow-md"
-            style={{ display: "block" }} // Forzar display block con inline style
-          >
-            Acerca de mí
-          </a>
-          <a
-            href="/testimonios"
-            className="block w-full bg-purple-500 text-white text-center font-bold py-3 px-6 rounded-lg shadow-md"
-            style={{ display: "block" }} // Forzar display block con inline style
-          >
-            Testimonios
-          </a>
-          <a
-            href="/contacto"
-            className="block w-full bg-purple-500 text-white text-center font-bold py-3 px-6 rounded-lg shadow-md"
-            style={{ display: "block" }} // Forzar display block con inline style
-          >
-            Contactar
-          </a>
+          {/* Subtítulo */}
+          <h2 className="text-2xl font-semibold mb-8 text-gray-700 dark:text-gray-300">Ingeniero de Software</h2>
+
+          {/* Descripción */}
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
+            Bienvenido a mi portafolio profesional. Soy un desarrollador apasionado por crear soluciones digitales que
+            mejoren la vida de las personas.
+          </p>
+
+          {/* Texto de prueba para verificar que esta sección es visible */}
+          <div className="mb-8">
+            <p className="text-red-500 font-bold">
+              ¿Puedes ver este texto rojo? Si sí, el problema está específicamente en los botones.
+            </p>
+          </div>
+
+          {/* Botones con estilos completamente básicos */}
+          <div className="space-y-4">
+            <div>
+              <a
+                href="/proyectos"
+                className="bg-purple-600 text-white px-8 py-4 text-lg font-bold"
+                style={{
+                  display: "block",
+                  width: "250px",
+                  margin: "0 auto 16px auto",
+                  textAlign: "center",
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  backgroundColor: "#9333ea",
+                  color: "white",
+                  padding: "16px 32px",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                }}
+              >
+                Ver proyectos
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="/acerca-de-mi"
+                className="bg-purple-600 text-white px-8 py-4 text-lg font-bold"
+                style={{
+                  display: "block",
+                  width: "250px",
+                  margin: "0 auto 16px auto",
+                  textAlign: "center",
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  backgroundColor: "#9333ea",
+                  color: "white",
+                  padding: "16px 32px",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                }}
+              >
+                Acerca de mí
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="/testimonios"
+                className="bg-purple-600 text-white px-8 py-4 text-lg font-bold"
+                style={{
+                  display: "block",
+                  width: "250px",
+                  margin: "0 auto 16px auto",
+                  textAlign: "center",
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  backgroundColor: "#9333ea",
+                  color: "white",
+                  padding: "16px 32px",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                }}
+              >
+                Testimonios
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="/contacto"
+                className="bg-purple-600 text-white px-8 py-4 text-lg font-bold"
+                style={{
+                  display: "block",
+                  width: "250px",
+                  margin: "0 auto 16px auto",
+                  textAlign: "center",
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  backgroundColor: "#9333ea",
+                  color: "white",
+                  padding: "16px 32px",
+                  fontSize: "18px",
+                  fontWeight: "bold",
+                }}
+              >
+                Contactar
+              </a>
+            </div>
+          </div>
+
+          {/* Texto de prueba después de los botones */}
+          <div className="mt-8">
+            <p className="text-blue-500 font-bold">¿Puedes ver este texto azul después de los botones?</p>
+          </div>
         </div>
       </div>
     </div>
