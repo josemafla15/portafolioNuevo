@@ -17,18 +17,29 @@ export default function Navbar() {
         color: "white",
         padding: "16px 0",
         width: "100%",
+        position: "relative",
+        zIndex: 50,
       }}
     >
-      {/* Versión móvil con hamburguesa - SOLO VISIBLE EN MÓVILES */}
+      {/* Versión móvil con hamburguesa */}
       <div
         style={{
-          display: "none", // Oculto por defecto
           padding: "0 16px",
+          display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
         }}
-        className="block md:hidden" // Visible en móviles, oculto en desktop
+        className="md:hidden"
       >
+        <span
+          style={{
+            fontSize: "18px",
+            fontWeight: "bold",
+            color: "white",
+          }}
+        >
+          José Mafla
+        </span>
         <button
           onClick={toggleMenu}
           style={{
@@ -38,6 +49,7 @@ export default function Navbar() {
             fontSize: "24px",
             cursor: "pointer",
             padding: "8px",
+            display: "block",
           }}
           aria-label="Menú de navegación"
         >
@@ -45,43 +57,93 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Versión desktop - igual que la original */}
+      {/* Versión desktop - centrada como la original */}
       <div
-        className="container mx-auto flex justify-center"
         style={{
-          display: "flex", // Visible por defecto
+          display: "none",
         }}
+        className="hidden md:flex md:justify-center"
       >
-        <ul className="flex flex-wrap gap-6 text-lg font-semibold">
+        <ul
+          style={{
+            display: "flex",
+            listStyle: "none",
+            margin: 0,
+            padding: 0,
+            gap: "24px",
+            fontSize: "18px",
+            fontWeight: "600",
+          }}
+        >
           <li>
-            <Link href="/" className="hover:text-purple-400 transition-colors">
+            <Link
+              href="/"
+              style={{
+                color: "white",
+                textDecoration: "none",
+                transition: "color 0.3s",
+              }}
+              className="hover:text-purple-400"
+            >
               Inicio
             </Link>
           </li>
           <li>
-            <Link href="/acerca-de-mi" className="hover:text-purple-400 transition-colors">
+            <Link
+              href="/acerca-de-mi"
+              style={{
+                color: "white",
+                textDecoration: "none",
+                transition: "color 0.3s",
+              }}
+              className="hover:text-purple-400"
+            >
               Acerca de mí
             </Link>
           </li>
           <li>
-            <Link href="/proyectos" className="hover:text-purple-400 transition-colors">
+            <Link
+              href="/proyectos"
+              style={{
+                color: "white",
+                textDecoration: "none",
+                transition: "color 0.3s",
+              }}
+              className="hover:text-purple-400"
+            >
               Proyectos
             </Link>
           </li>
           <li>
-            <Link href="/testimonios" className="hover:text-purple-400 transition-colors">
+            <Link
+              href="/testimonios"
+              style={{
+                color: "white",
+                textDecoration: "none",
+                transition: "color 0.3s",
+              }}
+              className="hover:text-purple-400"
+            >
               Testimonios
             </Link>
           </li>
           <li>
-            <Link href="/contacto" className="hover:text-purple-400 transition-colors">
+            <Link
+              href="/contacto"
+              style={{
+                color: "white",
+                textDecoration: "none",
+                transition: "color 0.3s",
+              }}
+              className="hover:text-purple-400"
+            >
               Contacto
             </Link>
           </li>
         </ul>
       </div>
 
-      {/* Menú móvil desplegable - SOLO VISIBLE EN MÓVILES CUANDO ESTÁ ABIERTO */}
+      {/* Menú móvil desplegable - ordenado verticalmente */}
       {isMenuOpen && (
         <div
           style={{
@@ -90,23 +152,21 @@ export default function Navbar() {
             left: 0,
             right: 0,
             backgroundColor: "#0f172a",
-            boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+            boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.3)",
             zIndex: 40,
-            display: "none", // Oculto por defecto
+            borderTop: "1px solid rgba(255, 255, 255, 0.1)",
           }}
-          className="block md:hidden" // Visible en móviles, oculto en desktop
+          className="md:hidden"
         >
           <ul
             style={{
               listStyle: "none",
               margin: 0,
-              padding: "16px 0",
+              padding: "8px 0",
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
-              gap: "16px",
-              fontSize: "18px",
-              fontWeight: "600",
+              fontSize: "16px",
+              fontWeight: "500",
             }}
           >
             <li>
@@ -116,11 +176,12 @@ export default function Navbar() {
                 style={{
                   color: "white",
                   textDecoration: "none",
-                  padding: "8px 16px",
+                  padding: "12px 24px",
                   display: "block",
-                  width: "200px",
-                  textAlign: "center",
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+                  transition: "background-color 0.2s",
                 }}
+                className="hover:bg-gray-700"
               >
                 Inicio
               </Link>
@@ -132,11 +193,12 @@ export default function Navbar() {
                 style={{
                   color: "white",
                   textDecoration: "none",
-                  padding: "8px 16px",
+                  padding: "12px 24px",
                   display: "block",
-                  width: "200px",
-                  textAlign: "center",
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+                  transition: "background-color 0.2s",
                 }}
+                className="hover:bg-gray-700"
               >
                 Acerca de mí
               </Link>
@@ -148,11 +210,12 @@ export default function Navbar() {
                 style={{
                   color: "white",
                   textDecoration: "none",
-                  padding: "8px 16px",
+                  padding: "12px 24px",
                   display: "block",
-                  width: "200px",
-                  textAlign: "center",
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+                  transition: "background-color 0.2s",
                 }}
+                className="hover:bg-gray-700"
               >
                 Proyectos
               </Link>
@@ -164,11 +227,12 @@ export default function Navbar() {
                 style={{
                   color: "white",
                   textDecoration: "none",
-                  padding: "8px 16px",
+                  padding: "12px 24px",
                   display: "block",
-                  width: "200px",
-                  textAlign: "center",
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+                  transition: "background-color 0.2s",
                 }}
+                className="hover:bg-gray-700"
               >
                 Testimonios
               </Link>
@@ -180,11 +244,11 @@ export default function Navbar() {
                 style={{
                   color: "white",
                   textDecoration: "none",
-                  padding: "8px 16px",
+                  padding: "12px 24px",
                   display: "block",
-                  width: "200px",
-                  textAlign: "center",
+                  transition: "background-color 0.2s",
                 }}
+                className="hover:bg-gray-700"
               >
                 Contacto
               </Link>
